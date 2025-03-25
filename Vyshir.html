@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyshir</title>
+    <link rel="stylesheet" href="css/EstilosTelaInteira.css">
+    <link rel="icon" type="image/x-icon" href="Vyshir logo.png">
+</head>
+<body>
+    
+    <div class="MenuTemplate">
+        <iframe id="MenuIframe" src="Menu.html" frameBorder="0"></iframe>
+      </div>
+      <div class="MenuTemplate">
+        <iframe id="MenuIframeFixed" src="MenuFixed.html" frameBorder="0"></iframe>
+      </div>
+      <img id="Banner" src="Banner Exemplo.jpg"></img>
+    
+    <div id="BackgroundP"></div>
+    <script>
+        function teste() {
+            alert("funcionando");
+        }
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 120) {
+                document.getElementById('MenuIframeFixed').style.display = 'block'
+                document.getElementById('MenuIframe').style.display = 'none'
+            }
+            else {
+                document.getElementById('MenuIframe').style.display = 'block'
+                document.getElementById('MenuIframeFixed').style.display = 'none'
+            }
+        })
+window.onload = (
+    setTimeout(Banner1, 1000)
+    )
+function Banner1() {
+        document.getElementById("Banner").src = 'Banner Exemplo3.jpg'
+        setTimeout(Banner2, 1000);
+}
+
+    function Banner2() {
+        document.getElementById("Banner").src = 'Banner Exemplo2.jpg'
+        setTimeout(Banner3, 1000);
+    }
+
+    function Banner3() {
+        document.getElementById("Banner").src = 'Banner Exemplo.jpg'
+        setTimeout(Banner1, 1000);
+    }
+
+    </script>
+</body>
+</html>

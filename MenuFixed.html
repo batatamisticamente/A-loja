@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuFixed</title>
+    <link rel="stylesheet" href="css/EstilosTelaInteira.css">
+    <style>
+        body {
+    overflow: hidden;
+}
+        </style>
+</head>
+<body>
+    <img id="Icon" onclick="MainPage()" src="Vyshir text Logo.png" style="height: 75%;">
+    <div id="Menu1"></div>
+    <div class="form-container" style="top: 110%;">
+        <form>
+            <input onkeydown="escrita()" type="text" id="pesquisar" placeholder="Pesquisar...">
+        </form>
+    </div>
+    <div></div>
+    <div id="Account" style="top: 18%;"><img src="User.png" style="width: 50px; margin: 0px;"></div>
+    <div id="Cart" style="top: 25%;" onclick="this.style.backgroundColor = '#e9e9e9';"><img src="HandBag.png" style="width: 80%; margin-left: 5%;"></div>
+    <div id="Notifications" style="top: 27%;"><img src="Heart Icon.png" style="width: 85%; margin: -1px;"></div>
+    <script>
+        function escrita() {
+            let escriba = document.getElementById("pesquisar");
+            console.log(escriba.value);
+        }
+        function MainPage() {
+            parent.window.location.href = "Vyshir.html"
+        }
+    </script>
+</body>
+</html>
